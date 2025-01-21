@@ -3,264 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>屋里香 Bite and Bite - 正宗上海小吃 | Authentic Shanghai Snacks</title>
+    <title>屋里香 | Bite and Bite</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
             line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
         }
-
+        
         .header {
-            background-color: #fff;
-            padding: 1rem;
             text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            border-radius: 8px;
         }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #d4201f;
+        
+        .header h1 {
+            color: #e31837;
+            margin-bottom: 10px;
         }
-
+        
         .subtitle {
             color: #666;
-            margin-top: 0.5rem;
+            margin-bottom: 30px;
         }
-
-        .nav {
-            margin-top: 1rem;
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
-
-        .nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 1rem;
-            padding: 0.5rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .nav a:hover {
-            background-color: #fff0f0;
-            color: #d4201f;
-        }
-
-        .main-content {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 3rem 1rem;
-            background-color: #fff8f8;
-            margin-bottom: 2rem;
+        
+        .info-section {
+            padding: 20px;
+            border: 1px solid #eee;
             border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #d4201f;
-            margin-bottom: 1rem;
+        
+        .info-section h2 {
+            color: #e31837;
+            margin-top: 0;
         }
-
+        
         .menu-section {
-            padding: 2rem 0;
+            margin-top: 40px;
         }
-
+        
         .menu-category {
-            background: white;
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
             border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
+        
         .menu-category h2 {
-            color: #d4201f;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #f0f0f0;
-            font-size: 1.8rem;
+            color: #e31837;
+            border-bottom: 2px solid #e31837;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
-
+        
         .menu-items {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            gap: 20px;
         }
-
+        
         .menu-item {
-            padding: 1rem;
-            border-radius: 6px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: transform 0.2s;
         }
-
+        
         .menu-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            background-color: #fff8f8;
         }
-
+        
         .menu-item h3 {
+            margin-top: 0;
             color: #333;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.1em;
         }
-
-        .menu-item .description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .menu-item .price {
-            color: #28a745;
+        
+        .price {
+            color: #e31837;
             font-weight: bold;
+            margin: 10px 0;
         }
-
+        
         .spicy-tag {
-            color: #d4201f;
-            font-size: 0.8rem;
-            margin-left: 0.5rem;
-        }
-
-        .footer {
-            background-color: #333;
+            background-color: #ff4d4d;
             color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-left: 8px;
         }
-
-        @media (max-width: 768px) {
-            .menu-items {
-                grid-template-columns: 1fr;
-            }
-
-            .nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
+        
+        .description {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .sub-item {
+            margin-left: 20px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">屋里香 | Bite and Bite</div>
+    <div class="header">
+        <h1>屋里香 | Bite and Bite</h1>
         <div class="subtitle">正宗上海小吃 · Authentic Shanghai Snacks</div>
-        <nav class="nav">
-            <a href="#signature">招牌菜 Signature</a>
-            <a href="#cold-dish">凉菜 Cold Dish</a>
-            <a href="#noodle-soup">汤品&面食 Noodle & Soup</a>
-        </nav>
-    </header>
-
-    <main class="main-content">
-        <section class="hero">
-            <h1>欢迎光临屋里香 | Welcome to Bite and Bite</h1>
-            <p>在渥太华品尝正宗上海风味 | Authentic Shanghai Flavors in Ottawa</p>
-        </section>
-
-        <section id="menu" class="menu-section">
-            <div id="signature" class="menu-category">
-                <h2>招牌菜 | Signature Dishes</h2>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <h3>油煎馄饨 | Pan Fried Wonton</h3>
-                        <p class="description">10个 | 10 pieces</p>
-                        <p class="price">$12.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>生煎包 | Pan Fried Bun</h3>
-                        <p class="description">4个 | 4 pieces</p>
-                        <p class="price">$7.99</p>
-                    </div>
+    </div>
+    
+    <div class="info-grid">
+        <div class="info-section">
+            <h2>营业时间 | Hours</h2>
+            <p>每日营业 | Daily: 11:00 - 20:00</p>
+        </div>
+        
+        <div class="info-section">
+            <h2>位置 | Location</h2>
+            <p>1465 Merivale Rd unit 002<br>
+            Nepean, ON K2E 5N9<br>
+            Canada</p>
+        </div>
+        
+        <div class="info-section">
+            <h2>联系我们 | Contact</h2>
+            <p>电话 | Phone: (613) 224-1888</p>
+        </div>
+    </div>
+    
+    <div class="menu-section">
+        <div class="menu-category">
+            <h2>招牌菜 | Signature Dishes</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>油煎馄饨 | Pan Fried Wonton</h3>
+                    <p class="description">10个 | 10 pieces</p>
+                    <p class="price">$12.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>生煎包 | Pan Fried Bun</h3>
+                    <p class="description">4个 | 4 pieces</p>
+                    <p class="price">$7.99</p>
                 </div>
             </div>
-
-            <div id="cold-dish" class="menu-category">
-                <h2>凉菜 | Cold Dishes</h2>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <h3>凉拌海带丝 | Chinese Seaweed Salad</h3>
-                        <p class="price">$5.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>凉拌莴笋黑木耳 | Lettuce Stem with Black Fungus Salad</h3>
-                        <p class="price">$5.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>四喜烤麸 | Sixi Braised Wheat Gluten</h3>
-                        <p class="price">$5.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>凉拌黄瓜 | Chinese Cucumber Salad</h3>
-                        <p class="price">$5.99</p>
-                    </div>
+        </div>
+        
+        <div class="menu-category">
+            <h2>凉菜 | Cold Dishes</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>凉拌海带丝 | Chinese Seaweed Salad</h3>
+                    <p class="price">$5.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>凉拌莴笋黑木耳 | Lettuce Stem with Black Fungus Salad</h3>
+                    <p class="price">$5.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>四喜烤麸 | Sixi Braised Wheat Gluten</h3>
+                    <p class="price">$5.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>凉拌黄瓜 | Chinese Cucumber Salad</h3>
+                    <p class="price">$5.99</p>
                 </div>
             </div>
-
-            <div id="noodle-soup" class="menu-category">
-                <h2>汤品&面食 | Noodle & Soup</h2>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <h3>雪菜肉丝面 | Pickled Vegetable & Shredded Pork Noodle Soup</h3>
-                        <p class="price">$14.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>酸菜肥肠拌面 | Pickled Cabbage Pig Intestines Noodle</h3>
-                        <p class="description"><span class="spicy-tag">辣 | Spicy</span></p>
-                        <p class="price">$12.88</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>咖喱牛肉粉丝汤 | Curry Beef Vermicelli Soup</h3>
-                        <p class="price">$11.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>香辣牛腩面 | Spicy Beef Brisket Noodle Soup</h3>
-                        <p class="description"><span class="spicy-tag">微辣 | Mild Spicy</span></p>
-                        <p class="price">$18.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>红烧大排面 | Soy Sauce Braised Pork Chop Noodle Soup</h3>
-                        <p class="price">$15.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>葱油拌面 | Scallion Noodles</h3>
-                        <p class="description">干拌 | Dry</p>
-                        <p class="price">$8.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>荠菜猪肉大馄饨 | Shepherd's Purse & Pork Wonton (Large) Soup</h3>
-                        <p class="price">$10.99</p>
-                    </div>
-                    <div class="menu-item">
-                        <h3>小馄饨 | Wonton Soup (Small)</h3>
-                        <p class="description">12个 | 12 pieces</p>
+        </div>
+        
+        <div class="menu-category">
+            <h2>汤品&面食 | Noodle & Soup</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>雪菜肉丝面 | Pickled Vegetable & Shredded Pork Noodle Soup</h3>
+                    <p class="price">$14.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>酸菜肥肠拌面 | Pickled Cabbage Pig Intestines Noodle</h3>
+                    <p class="description"><span class="spicy-tag">辣味 | Spicy</span></p>
+                    <p class="price">$12.88</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>咖喱牛肉粉丝汤 | Curry Beef Vermicelli Soup</h3>
+                    <p class="price">$11.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>香辣牛腩面 | Spicy Beef Brisket Noodle Soup</h3>
+                    <p class="description"><span class="spicy-tag">微辣 | Mild Spicy</span></p>
+                    <p class="price">$18.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>红烧大排面 | Soy Sauce Braised Pork Chop Noodle Soup</h3>
+                    <p class="price">$15.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>葱油拌面 | Scallion Noodles</h3>
+                    <p class="description">干拌 | Dry</p>
+                    <p class="price">$8.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>荠菜猪肉大馄饨 | Shepherd's Purse & Pork Wonton (Large) Soup</h3>
+                    <p class="price">$10.99</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h3>小馄饨 | Wonton Soup (Small)</h3>
+                    <p class="description">12个 | 12 pieces</p>
+                    <div class="sub-item">
                         <p>鲜肉虾仁 | Shrimp & Pork - $11.99</p>
                         <p>鲜肉 | Pork - $8.99</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>© 2025 屋里香 Bite and Bite. All rights reserved.</p>
-    </footer>
+        </div>
+    </div>
 </body>
 </html>
